@@ -3,7 +3,7 @@
 ### Tech Talk
 * For Windows users, please do all work inside WSL
 * Sharing your screen is a security concern (instructions posted in Discord)
-* Check your node version (14 WSL/Linux, 16 M1+)
+* Check your node version (14 or 16 WSL/Linux, 16 M1+)
 
 ### Curriculum Overview
 * Module 1 - Programming Fundamentals (functions, objects, conditions, arrays, loops) - Lotide
