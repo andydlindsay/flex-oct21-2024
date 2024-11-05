@@ -1,0 +1,23 @@
+{
+  "name": "fun-with-mocha",
+  "version": "0.1.0",
+  "description": "Has lots of fun with automated testing",
+  "main": "say-hello-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "testing",
+    "fun",
+    "mocha"
+  ],
+  "author": "Andy Lindsay",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.8.2"
+  },
+  "dependencies": {
+    "chai": "^5.1.2",
+    "express": "^4.21.1"
+  }
+}
