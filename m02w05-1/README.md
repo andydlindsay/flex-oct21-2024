@@ -5,58 +5,28 @@
 - [x] TCP introduction
 - [x] TCP demo
 
-### Networking
-* any computer that is connected to another computer can talk to that computer
-* ISP
+### What is networking?
+- Communication between machines on a network
 
-### IP
-* Internet Protocol
-* addresses have to be unique
-* IPv4 192.168.8.8
-* IPv6 2001:db8:3333:4444:5555:6666:7777:8888
-* street address
+### What is a protocol?
+- A defined standard for how requests and responses are sent between network devices
 
-### Port
-* uniquely identify a running process
-* apt number
-* 65,535 ports to choose from
-* <1000 reserved for the system
-* 3000 - 9000 for dev purposes
-* earmarked ports
-  * 80 http
-  * 22 ssh
-  * 443 https
-  * 5432 postgres
+### Transport Layer Protocols
+- Break data into packets to be sent over the network layer
+- Give each packet a header with origin and destination
+- **UDP**: **U**ser **D**atagram **P**rotocol
+  - Smaller header size (8 bytes) which results in smaller packet sizes
+  - _Connectionless_ ie. there is no need to establish or maintain a connection
+  - No error recovery (any corrupted packets are discarded)
+  - Packets can arrive in any order
+  - Useful for streaming/low latency applications
+- **TCP**: **T**ransmission **C**ontrol **P**rotocol
+  - Larger header size (20 bytes)
+  - Requires a connection (3-way handshake)
+  - Corrupted packets are reported to the server and are re-sent
+  - Packets arrive in order
+  - Useful when guaranteed communication is needed
 
-### Sending Messages
-* cut the message into packets
-* header => address information
-* 1/500, 2/500
-
-### TCP
-* Transmission Control Protocol
-* requires connection (three way handshake)
-* has error recovery
-* TCP/IP
-
-### UDP
-* User Datagram Protocol
-* connectionless
-* no error recovery
-
-servers - have information
-clients - want information
-
-### Event-driven Programming
-* connect, disconnect, send a message, error
-* code that doesn't run when the server starts
-* it only runs when the particular event occurs
-
-### Encoding
-* everything on your system is stored in binary (1 and 0)
-* the character 'a' might map to the number 62
-
-Snake Snek
-"Move: up"
-"Move: left"
-connection.write('Move: up')
+### Useful Links
+* [OSI Model](https://en.wikipedia.org/wiki/OSI_model)
+* [Net package documentation](https://nodejs.org/api/net.html)
