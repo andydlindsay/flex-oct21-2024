@@ -17,7 +17,6 @@ promiseObj
     console.log('inside the .catch', err);
   })
 
-
 // higherOrderFunct((err, data) => {
 //   if (err) {
 //     // handle error
