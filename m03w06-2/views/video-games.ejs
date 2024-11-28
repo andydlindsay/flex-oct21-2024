@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All the Video Games</title>
+</head>
+<body>
+  <h1>All the video games!</h1>
+
+  <a href="/videoGames/new">Create a new game</a>
+
+  <% for (const videoGameKey in videoGames) { %>
+    <div style="border: 2px solid pink;">
+      <h2>Title: <%= videoGames[videoGameKey].title %></h2>
+      <h3>Genre: <%= videoGames[videoGameKey].genre %></h3>
+      <h3>Release Year: <%= videoGames[videoGameKey].releaseYear %></h3>
+      <h3>Platform: <%= videoGames[videoGameKey].platform %></h3>
+      <form method="POST" action="/videoGames/<%= videoGameKey %>/delete">
+        <button type="submit">Delete</button>
+      </form>
+      <a href="/videoGames/<%= videoGameKey %>/edit">
+        <button>Edit</button>
+      </a>
+    </div>
+  <% } %>
+</body>
+</html>
